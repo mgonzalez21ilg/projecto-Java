@@ -10,7 +10,7 @@ public class Institut {
 
     }
     public String obtenirDades() {
-        return  " Escola: " + this.nom;
+        return  " Escola: " + this.nom + " llista: ";
 
 
     }

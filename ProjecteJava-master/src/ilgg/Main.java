@@ -5,12 +5,9 @@ import java.util.Date;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        Date dataInici = new Date( 2022, 4, 15 );
-        Date dataFi = new Date( 2022, 4, 25 );
 
         //profeSubstitut.iniciarSubstitucio(dataInici, dataFi);
-        System.out.println(dataInici.getDate() + "/" + dataInici.getMonth() + "/" + dataInici.getYear());
-        System.out.println(dataFi.getDate() + "/" + dataFi.getMonth() + "/" + dataFi.getYear());
+
 
         Institut ins = new Institut();
         ins.canviarNom("Institut La Guineueta");
@@ -33,9 +30,16 @@ public class Main {
 
 
         p1.canviarNom("Pepe");
+        ProfessorSubstiut profe2 = new ProfessorSubstiut();
+        profe2.canviarNom("Antonio");
+        Date dataInici = new Date(2021, 11, 1);
+        Date dataFi = new Date(2022, 6, 30);
+        profe2.assignarDni("11");
+        dades = profe2.obtenirDades();
 
-        dades = p1.obtenirDades();
-        System.out.println(dades + Dni);
+        System.out.println( dades +  " , " +
+                dataInici.getDate() + "/" + dataInici.getMonth() + "/" + dataInici.getYear() +" al " +
+                dataFi.getDate() + "/" + dataFi.getMonth() + "/" + dataFi.getYear() + ")" );
 
         Estudiant e = new Estudiant();
         e.posarNota(9.9);
@@ -46,10 +50,12 @@ public class Main {
 
         Professor p = new Professor();
         p.canviarNom("Pep");
+
         p.canviarSou(150.55);
         p.assignarDni("42342534H");
         dades = p.obtenirDades();
         System.out.println(dades);
+
 
     }
 }
